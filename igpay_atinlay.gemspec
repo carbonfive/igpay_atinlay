@@ -3,8 +3,8 @@ $:.push File.expand_path("../lib", __FILE__)
 require "igpay_atinlay/version"
 
 Gem::Specification.new do |s|
-  s.name        = "iglatinpay"
-  s.version     = Iglatinpay::VERSION
+  s.name        = "igpay_atinlay"
+  s.version     = IgpayAtinlay::VERSION
   s.authors     = ["Michael Wynholds"]
   s.email       = ["mike@carbonfive.com"]
   s.homepage    = ""

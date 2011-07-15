@@ -1,3 +1,3 @@
-module Iglatinpay
-  VERSION = "0.0.1"
+module IgpayAtinlay
+  VERSION = "1.0"
 end
