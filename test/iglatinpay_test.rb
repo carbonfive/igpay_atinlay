@@ -47,9 +47,14 @@ class IglatinpayTest < MiniTest::Spec
       'hello 12345 abc123 ab123cd world'.to_pig_latin.must_equal 'ellohay 12345 abc123 ab123cd orldway'
     end
   end
-  describe 'leet speak' do
-    it 'considers leet (1337) speak numbers as characters' do
-
+  describe 'edge cases' do
+    it 'converts "a" to "ay", not "aay"' do
+      'a'.to_pig_latin.must_equal 'ay'
+    end
+  end
+  describe 'hyphens' do
+    it 'splits hyphenated words up' do
+      'rob is a bad-ass'.to_pig_latin.must_equal 'obray isay ay adbay-assay'
     end
   end
 end
