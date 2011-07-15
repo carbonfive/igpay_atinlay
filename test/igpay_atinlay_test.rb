@@ -48,8 +48,11 @@ class IglatinpayTest < MiniTest::Spec
     end
   end
   describe 'edge cases' do
-    it 'converts "a" to "ay", not "aay"' do
+    it 'converts "a" to "ay"' do
       'a'.to_pig_latin.must_equal 'ay'
+    end
+    it 'converts "A" to "Ay"' do
+      "A dog".to_pig_latin.must_equal 'Ay ogday'
     end
   end
   describe 'hyphens' do

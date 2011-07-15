@@ -5,11 +5,10 @@ String.class_eval do
         word
       else
         word.match /^(qu|[^aeiou]*)(.+?)([^a-z]*)$/i do |m|
-          first, middle, punc = m[1], m[2], m[3]
-          middle.capitalize! if first =~ /^[A-Z]/
-          first.downcase!
-          last = (middle + first == 'a' ? 'y' : 'ay')
-          middle + first + last + punc
+          first, punc = m[2] + m[1], m[3]
+          first.capitalize! if word =~ /^[A-Z]/
+          last = (first.downcase == 'a' ? 'y' : 'ay')
+          first + last + punc
         end
       end
     end.join
